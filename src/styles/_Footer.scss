@@ -1,0 +1,56 @@
+.footer {
+  margin-top: 50px;
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    background: #1c1c1c;
+    position: relative;
+    @media (max-width: 992px) {
+      padding: 20px 15px;
+    }
+  }
+  &__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: rgb(112, 111, 111);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    @include adaptive-value('font-size', 16, 14, 1);
+    transition: 0.2s linear;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #3be251f6;
+        text-shadow: 0 0 10px #3be251f6;
+      }
+    }
+    @media (max-width: 580px) {
+      left: auto;
+      right: 15px;
+      transform: translateY(-50%);
+    }
+  }
+  &__icon {
+    margin: 0 20px;
+    @include adaptive-value('font-size', 20, 16, 1);
+    @media (max-width: 992px) {
+      margin: 0 10px;
+    }
+  }
+  &__item {
+    color: rgb(112, 111, 111);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    @include adaptive-value('font-size', 16, 14, 1);
+    transition: 0.2s linear;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #3be251f6;
+        text-shadow: 0 0 10px #3be251f6;
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #32cd32;
+  background: #222222;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  min-height: 100%;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+// ======================== Icons ========================
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.ttf?jy8z5f') format('truetype'),
+  url('../fonts/icomoon.woff?jy8z5f') format('woff'),
+  url('../fonts/icomoon.svg?jy8z5f#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-']::before,
+[class*=' icon-']::before {
+  font-family: 'icomoon', sans-serif !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+.icon-select-arrow:before {
+  content: '\e900';
+}
+
+.icon-logo:before {
+  content: '\e901';
+  color: #219e21;
+}
+
+.icon-dis:before {
+  content: '\e902';
+}
+
+.icon-vk:before {
+  content: '\e903';
+}
+
+.icon-tw:before {
+  content: '\e904';
+}
+
+.icon-fb:before {
+  content: '\e905';
+}
+
+// ======================== /Icons ========================
+
+@import './_mixins.scss';
+@import './_Btn.scss';
+@import './_Header.scss';
+@import './_News.scss';
+@import './_Aside.scss';
+@import './_NewsList.scss';
+@import './_pagination.scss';
+@import './_About.scss';
+@import './_Games.scss';
+@import './_Projects.scss';
+@import './_Order.scss';
+@import './_Page.scss';
+@import './_select.scss';
+@import './_form.scss';
+@import './_date.scss';
+@import './_Footer.scss';

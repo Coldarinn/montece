@@ -1,0 +1,93 @@
+.form {
+  padding-top: 50px;
+  &__row {
+    display: flex;
+    margin: 0 -10px;
+    .form__item {
+      flex-basis: 50%;
+      padding: 0 10px;
+      @media (max-width: 992px) {
+        padding: 0;
+      }
+    }
+    @media (max-width: 992px) {
+      display: block;
+      margin: 0;
+    }
+  }
+  &__message {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    padding-left: 10px;
+    font-size: 12px;
+    padding-bottom: 3px;
+    color: #ff1b1b;
+    @media (max-width: 992px) {
+      padding-left: 0;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    margin-bottom: 10px;
+    @include adaptive-value('font-size', 28, 24, 1);
+    text-align: center;
+  }
+  &__subtitle {
+    @include adaptive-value('font-size', 16, 14, 1);
+    color: #8c8c8c;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    a {
+      color: #219e21;
+      transition: 0.2s linear;
+      @media (any-hover: hover) {
+        &:hover {
+          text-shadow: 0 0 15px #219e21;
+        }
+      }
+    }
+  }
+  &__item {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  &__label {
+    @include adaptive-value('font-size', 18, 14, 1);
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  &__input {
+    height: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    color: #219e21;
+    @include adaptive-value('font-size', 18, 14, 1);
+    border: 2px solid #219e21;
+    background: transparent;
+    transition: 0.2s linear;
+    &:focus {
+      box-shadow: 0 0 4px #3be251f6, inset 0 0 4px #3be251f6;
+    }
+    &._error {
+      border-color: red;
+      box-shadow: none;
+    }
+  }
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  &__button {
+    display: flex;
+    margin: 0px auto;
+    cursor: pointer;
+    &.disabled {
+      pointer-events: none;
+      background: #219e21;
+    }
+  }
+}

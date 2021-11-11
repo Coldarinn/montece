@@ -1,0 +1,35 @@
+.flatpickr-input {
+  height: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  color: #219e21;
+  @include adaptive-value('font-size', 18, 15, 1);
+  border: 2px solid #219e21;
+  background: transparent;
+  transition: 0.2s linear;
+  &:focus {
+    box-shadow: 0 0 4px #3be251f6, inset 0 0 4px #3be251f6;
+  }
+  &._error {
+    border-color: red;
+    box-shadow: 0 0 5px 1px red;
+  }
+}
+
+.flatpickr-calendar.arrowTop:before {
+  border-bottom-color: #219e21 !important;
+}
+
+.flatpickr-weekdays,
+.flatpickr-weekday,
+.flatpickr-monthDropdown-month,
+.flatpickr-monthDropdown-months,
+.flatpickr-month,
+.flatpickr-day.selected {
+  background: #219e21 !important;
+}
+
+.flatpickr-weekday {
+  color: #ffffff !important;
+}

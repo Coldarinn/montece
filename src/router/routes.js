@@ -1,0 +1,7 @@
+export const NEWS_ROUTE = '/'
+export const NEWS_PAGE_ROUTE = '/news/:id'
+export const ABOUT_ROUTE = '/about'
+export const CONNECT_ROUTE = '/connect'
+export const GAMES_ROUTE = '/games'
+export const ORDER_ROUTE = '/order'
+export const PROJECTS_ROUTE = '/projects'

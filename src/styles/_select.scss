@@ -1,0 +1,49 @@
+.select {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+  color: #219e21;
+  letter-spacing: 0.5px;
+  @include adaptive-value('font-size', 18, 14, 1);
+  &__body {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    border: 2px solid #219e21;
+    border-top: 0;
+    background: #222222;
+    border-radius: 0 0 4px 4px;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__current {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid #219e21;
+    &.active {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+  &__option {
+    padding: 10px 15px;
+    transition: 0.2s linear;
+    cursor: pointer;
+    &:not(:last-child) {
+      border-bottom: 2px solid #219e21;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ffffff;
+        background: #219e21;
+      }
+    }
+    &.active {
+      color: #ffffff;
+      background: #219e21;
+    }
+  }
+}

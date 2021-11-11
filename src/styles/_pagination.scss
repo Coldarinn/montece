@@ -1,0 +1,32 @@
+.pagination-news {
+  display: flex;
+  justify-content: center;
+  max-width: 700px;
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    @include adaptive-value('font-size', 18, 14, 1);
+    font-weight: 500;
+    background: #22cd22;
+    box-shadow: 0 0 15px #219e21;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s linear;
+    & + & {
+      margin-left: 6px;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background: #219e21;
+      }
+    }
+    &.active {
+      background: #219e21;
+      box-shadow: none;
+    }
+  }
+}

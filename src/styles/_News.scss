@@ -1,0 +1,13 @@
+.news {
+  margin-top: 50px;
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 990px) {
+      display: block;
+    }
+  }
+  &__list {
+    flex: 0 1 80%;
+  }
+}

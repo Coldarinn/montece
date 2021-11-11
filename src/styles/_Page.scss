@@ -1,0 +1,44 @@
+.page {
+  margin-top: 50px;
+  &__title {
+    font-weight: 700;
+    @include adaptive-value('font-size', 40, 28, 1);
+    @include adaptive-value('margin-bottom', 30, 20, 1);
+  }
+
+  &__text {
+    @include adaptive-value('font-size', 17, 14, 1);
+    color: #ffffff;
+    p + p {
+      @include adaptive-value('margin-top', 15, 10, 1);
+    }
+  }
+
+  &__image {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  &__video {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+  }
+
+  &__download {
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+  &__footer {
+    width: 100%;
+    text-align: center;
+    @include adaptive-value('margin-top', 30, 20, 1);
+  }
+  video {
+    max-width: 640px;
+    width: 100%;
+    max-height: 360px;
+    height: 100%;
+  }
+}
